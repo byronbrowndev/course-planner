@@ -15,11 +15,11 @@ const myReducer = createReducer(
       return semesters.map((semester: Semester) => {
         if (semester.season === payload.searchInfo.season && semester.year === payload.searchInfo.year) {
           const updatedCourse = { name: payload.courseInfo.name , grade: payload.courseInfo.grade, hours: payload.courseInfo.hours,}
-          const newCourses = semester.classes.map((c, i) => i === payload.searchInfo.index ? updatedCourse : c);
+          const newCourses = semester.courses.map((c, i) => i === payload.searchInfo.index ? updatedCourse : c);
           // console.log(newThing)
           return {
             ...semester,
-            classes: newCourses
+            courses: newCourses
           };
         }
         return semester

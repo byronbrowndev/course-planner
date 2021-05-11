@@ -5,11 +5,11 @@ import { changeCourse } from 'src/app/store/actions/semester.actions';
 import { AppState } from 'src/app/store/reducers';
 
 @Component({
-  selector: 'app-editable-class',
-  templateUrl: './editable-class.component.html',
-  styleUrls: ['./editable-class.component.css']
+  selector: 'app-course',
+  templateUrl: './course.component.html',
+  styleUrls: ['./course.component.css']
 })
-export class EditableClassComponent implements OnInit {
+export class CourseComponent implements OnInit {
   @Input() course: Course;
   @Input() semester: [string, string];
   @Input() index: number

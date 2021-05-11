@@ -7,7 +7,7 @@ import { PlannerComponent } from './components/planner/planner.component';
 import { GpaDisplayComponent } from './components/gpa-display/gpa-display.component';
 import { SemesterComponent } from './components/semester/semester.component';
 import { NotableEventComponent } from './components/notable-event/notable-event.component';
-import { EditableClassComponent } from './components/editable-class/editable-class.component';
+import { CourseComponent } from './components/course/course.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
@@ -21,7 +21,7 @@ import { reducers } from './store/reducers';
     GpaDisplayComponent,
     SemesterComponent,
     NotableEventComponent,
-    EditableClassComponent
+    CourseComponent
   ],
   imports: [
     BrowserModule,

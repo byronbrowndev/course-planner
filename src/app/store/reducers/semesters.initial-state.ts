@@ -2,7 +2,7 @@ export const initialState = [
     {
       season: 'Spring',
       year: '2021',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 }
       ]
@@ -10,7 +10,7 @@ export const initialState = [
     {
       season: 'Summer',
       year: '2021',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 }
       ]
@@ -18,7 +18,7 @@ export const initialState = [
     {
       season: 'Fall',
       year: '2021',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
@@ -29,7 +29,7 @@ export const initialState = [
     {
       season: 'Spring',
       year: '2022',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
@@ -40,7 +40,7 @@ export const initialState = [
     {
       season: 'Summer',
       year: '2022',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 }
@@ -49,7 +49,7 @@ export const initialState = [
     {
       season: 'Fall',
       year: '2022',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
@@ -60,7 +60,7 @@ export const initialState = [
     {
       season: 'Spring',
       year: '2023',
-      classes: [
+      courses: [
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },
         { name: 'TBD', hours: 3, grade: 4 },

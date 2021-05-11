@@ -1,3 +1,6 @@
 <h1>{{ semester.season }} {{semester.year}}</h1>
-<app-editable-class *ngFor="let course of semester.classes; let i = index" [index]="i" [semester]="[semester.season, semester.year]" [course]="course"></app-editable-class>
+<app-course 
+    *ngFor="let course of semester.courses; let i = index" 
+    [index]="i" [semester]="[semester.season, semester.year]" [course]="course">
+</app-course>
 <h3>Semester GPA:</h3>
