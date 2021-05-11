@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './store/reducers';
+import { GpaCalculationService } from './services/gpaCalculation.service';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -31,7 +32,7 @@ import { reducers } from './store/reducers';
     // EffectsModule.forRoot([HomeRepairEffects]),
     // BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GpaCalculationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

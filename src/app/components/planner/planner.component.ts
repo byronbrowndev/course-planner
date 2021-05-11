@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Semester } from 'src/app/models/Semester.interface';
+import { GpaCalculationService } from 'src/app/services/gpaCalculation.service';
 import { AppState } from 'src/app/store/reducers';
 import { changeCourse } from '../../store/actions/semester.actions';
 
@@ -11,16 +12,17 @@ import { changeCourse } from '../../store/actions/semester.actions';
   styleUrls: ['./planner.component.css']
 })
 export class PlannerComponent implements OnInit {
-  currentAccumulativeGpa = 2.3333333;
-  amendedAccumulativeGpa = 2.8133333;
-  projectedFinalAccumulativeGpa = 3.233333;
+  amendedAccumulativeGpa: number;
+  projectedFinalAccumulativeGpa: number;
 
   semester$: Observable<Semester[]>
 
-  constructor(private store: Store) { }
+  constructor(private store: Store, private gpaCalculationService: GpaCalculationService) { }
 
   ngOnInit(): void {
-    this.semester$ = this.store.select((state: AppState) => state.semesters )
+    this.semester$ = this.store.select((state: AppState) => state.semesters);
+    // this.amendedAccumulativeGpa = gp
+
   }
 
 }
