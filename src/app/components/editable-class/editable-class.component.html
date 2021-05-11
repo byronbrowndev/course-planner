@@ -1,3 +1,3 @@
-<input type="text" #grade [value]="course.name">
-<input type="text" #hours [value]="course.grade">
-<input type="text" #name [value]="course.hours"><br>
+<input type="text" (change)="onChange(grade.value, hours.value, name.value)" #name [value]="course.name">
+<input type="text" (change)="onChange(grade.value, hours.value, name.value)" #grade [value]="course.grade">
+<input type="text" (change)="onChange(grade.value, hours.value, name.value)" #hours [value]="course.hours"><br>

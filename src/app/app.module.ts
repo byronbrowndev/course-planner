@@ -9,6 +9,9 @@ import { SemesterComponent } from './components/semester/semester.component';
 import { NotableEventComponent } from './components/notable-event/notable-event.component';
 import { EditableClassComponent } from './components/editable-class/editable-class.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { reducers } from './store/reducers';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -23,7 +26,9 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument(),
+    // EffectsModule.forRoot([HomeRepairEffects]),
     // BrowserAnimationsModule
   ],
   providers: [],

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Semester } from 'src/app/models/Semester.interface';
+import { AppState } from 'src/app/store/reducers';
+import { changeCourse } from '../../store/actions/semester.actions';
 
 @Component({
   selector: 'app-planner',
@@ -9,82 +14,13 @@ export class PlannerComponent implements OnInit {
   currentAccumulativeGpa = 2.3333333;
   amendedAccumulativeGpa = 2.8133333;
   projectedFinalAccumulativeGpa = 3.233333;
-  
-  semesters = [
-    {
-      name: 'Spring',
-      year: '2021',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Summer',
-      year: '2021',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Fall',
-      year: '2021',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Spring',
-      year: '2022',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Summer',
-      year: '2022',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Fall',
-      year: '2022',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    },
-    {
-      name: 'Spring',
-      year: '2023',
-      classes: [
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 },
-        { name: '', hours: 3, grade: 4 }
-      ]
-    }
-  ]
 
-  constructor() { }
+  semester$: Observable<Semester[]>
+
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.semester$ = this.store.select((state: AppState) => state.semesters )
   }
 
 }

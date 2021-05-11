@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Semester } from 'src/app/models/Semester.interface';
 
 @Component({
   selector: 'app-semester',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./semester.component.css']
 })
 export class SemesterComponent implements OnInit {
-  @Input() semester: {name: string, year: string, classes: number};
+  @Input() semester: Semester;
 
   constructor() { }
 

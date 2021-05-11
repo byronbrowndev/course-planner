@@ -1,4 +1,4 @@
 <app-gpa-display title="current accumalative GPA" [gpa]="currentAccumulativeGpa" ></app-gpa-display>
 <app-gpa-display title="amended accumalative GPA" [gpa]="amendedAccumulativeGpa" ></app-gpa-display>
 <app-gpa-display title="projected amended final accumalative GPA" [gpa]="projectedFinalAccumulativeGpa" ></app-gpa-display>
-<app-semester *ngFor="let semester of semesters" [semester]="semester" ></app-semester>
+<app-semester *ngFor="let semester of (semester$ | async)" [semester]="semester" ></app-semester>
