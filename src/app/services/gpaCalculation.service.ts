@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 export class GpaCalculationService {
     currentGpa(credits: number, points: number) {
         const gpa =  points/credits;
-        return gpa
+        return gpa;
     }
 
 }

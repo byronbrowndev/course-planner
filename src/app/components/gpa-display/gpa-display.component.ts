@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GpaCalculationService } from 'src/app/services/gpaCalculation.service';
 
 @Component({
   selector: 'app-gpa-display',
@@ -7,11 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GpaDisplayComponent implements OnInit {
   @Input() title: string;
-  @Input() gpa: number;
+  @Input() points: number;
+  @Input() credits: number;
 
-  constructor() { }
+  gpa: number
+
+  constructor(private gpaCalculationService: GpaCalculationService) { }
 
   ngOnInit(): void {
+    this.gpa = this.gpaCalculationService.currentGpa(this.credits, this.points)
   }
 
 }
